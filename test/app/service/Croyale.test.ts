@@ -12,7 +12,6 @@ describe('test/app/service/Croyale.test.js', () => {
   it('version', async () => {
     const version = await ctx.service.croyale.version()
 
-    console.log('version', version)
     assert(version === '12.0.101')
   })
 })

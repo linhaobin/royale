@@ -7,6 +7,15 @@ describe('test/app/controller/croyale.test.ts', () => {
       .httpRequest()
       .get('/')
       .expect(200)
+    assert(result.text === 'croyale hi')
+  })
+
+
+  it('should GET /version', async () => {
+    const result = await app
+      .httpRequest()
+      .get('/version')
+      .expect(200)
     assert(result.text === '12.0.101')
   })
 })
