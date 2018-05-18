@@ -4,7 +4,7 @@ FROM node:10.1.0-alpine
 WORKDIR /usr/src/app
 
 # add npm package
-COPY package.json yarn.lock /usr/src/app/package.json
+COPY package.json yarn.lock /usr/src/app/
 
 # install
 RUN yarn --registry=https://registry.npm.taobao.org
