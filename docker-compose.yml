@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  royale:
+    container_name: royale
+    image: royale
+    build: .
+    environment:
+      - VIRTUAL_HOST=jenkins.linhaobin.com
+      - VIRTUAL_PORT=80
