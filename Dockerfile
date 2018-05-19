@@ -4,16 +4,16 @@ FROM node:10.1.0-alpine
 WORKDIR /usr/src/app
 
 # add npm package
-COPY package.json yarn.lock /usr/src/app/
+COPY package.json /usr/src/app/
 
 # install
-RUN yarn --registry=https://registry.npm.taobao.org
+RUN npm install --registry=https://registry.npm.taobao.org
 
 # copy code
 COPY . /usr/src/app
 
 # build
-RUN yarn ci
+RUN npm run ci
 
 ENV PORT=80
 
